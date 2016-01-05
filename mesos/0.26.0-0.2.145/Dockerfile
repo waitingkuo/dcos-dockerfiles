@@ -5,3 +5,6 @@ RUN echo "deb http://repos.mesosphere.io/ubuntu/ trusty main" > /etc/apt/sources
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv E56151BF
 RUN apt-get -y update
 RUN apt-get -y install mesos=0.26.0-0.2.145
+
+RUN apt-get -y curl
+RUN curl https://get.docker.com/builds/Linux/x86_64/docker-1.9.1 > /bin/docker
